@@ -1,0 +1,1 @@
+select count(*) from ratings where ratings.rating = 10;

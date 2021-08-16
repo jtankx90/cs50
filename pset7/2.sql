@@ -1,0 +1,1 @@
+select birth from people where people.name = 'Emma Stone';
