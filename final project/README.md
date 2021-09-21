@@ -41,8 +41,8 @@ Items that are on sale will be shown in this page in the format of cards in a de
 
     Files used: Sale.html, items_modal.html
 
-2. **Account**
-There is  an account option that allows users to change their email address registered with the website.
+2. **Account**  
+Added option allowing users to change their email address registered with the website.
 
 Files used: account.html
 
