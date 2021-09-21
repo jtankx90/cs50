@@ -36,7 +36,10 @@ There is  an account option that allows users to change their email address regi
 
 ## Admin Account  
 
-This app has an added administrator functionality, for which the designated admin account can access the backend database without the use of any database software. The Admin tab in the nav bar will only be available to the admin account. Any attempts for direct access to the pages will be redirectd to the home page.
+This app has an added administrator functionality, for which the designated admin account can access the backend database without the use of any database software. The Admin tab in the nav bar will only be available to the admin account. Any attempts for direct access to the pages will be redirectd to the home page. In the admin page, the admin can do the following:   
+    * insert and delete entries in the items and item_img table through the upload of a json file for each function;
+    * Alternatively, each table in the database is presented as a tab, in which the data for each table will be shown. In the user table, the password column has been remove for viewing i.e. even when using the admin account, the hashed password will not be shown. When inserting new users directly (without registering an account), a password input box will be available for inputing the password. The password will then be converted into into it's hashed equivalent and stored in the database
+    
 
 
 
