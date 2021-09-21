@@ -65,7 +65,7 @@ script for scrapping reddit for sample images
 contains all the forms used in the app
 
 3) **models.py**   
-data models used in the backend database. consisting of 3 models: User, Items, Item_img  
+data models used in the backend database, consisting of 3 models: User, Items, Item_img  
 
 4) **shop.db**   
 sqlite database   
