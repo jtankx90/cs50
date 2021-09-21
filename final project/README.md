@@ -9,9 +9,9 @@ for registered account users!
 
 Upon arriving the home page, visitors are greeted with a carousel of images of the items that are not on sale - sale items are only for registered users.
 
-Visitors  
+## Visitors  
 
-Besides the home page, there are 3 active nav items in the nav bar for visitors (Product, Login and Register):
+Besides the home page, there are 3 active nav items in the nav bar for visitors:
 
 1. **Product**  
 In the product page, all non-sale products are listed here with their information such as price, quantity. There is also a button that provides further information
@@ -24,11 +24,19 @@ In the login page, visitors can login to their registered account via the email 
 3. **Register**  
 Vistors can register an account to gain access to sale items. Vistors are required to key in their first and last name, email address, password and also a confirmation password. In the password field, a prompt of messages (requirements) is shown for the specification of a strong password. Each message will turn green indicating the meeting of that requirement. 
 
-Registered Users  
+## Registered Users  
 
-Once visitors have logged onto their account, an addiitional nav item - Sale - will be shown. Items that are on sale will be shown in this page in the format of cards in a deck. For each card, similar to the product page, users can click on the more info button that view further information for each of the sale product.
+Once visitors have logged onto their account, two addiitional nav items will be shown.  
 
-There is also an account option that allows users to change their email address registered with the website.
+1. **Sale**  
+Items that are on sale will be shown in this page in the format of cards in a deck. For each card, similar to the product page, users can click on the more info button that view further information for each of the sale product.  
+
+2. **Account**
+There is  an account option that allows users to change their email address registered with the website.
+
+## Admin Account  
+
+This app has an added administrator functionality, for which the designated admin account can access the backend database without the use of any database software. The Admin tab in the nav bar will only be available to the admin account. Any attempts for direct access to the pages will be redirectd to the home page.
 
 
 
