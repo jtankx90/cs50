@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block content %}
+<main class="container p-5">
+
+    <body class="text-center">
+    <div class="content-section">
+        <form method = "POST" class="form-register">
+            {{ form.hidden_tag() }}
+        
+            <h1>Register An Account</h1><br>
+            
+            <div class="form-group">
+                {{ form.firstname(class="form-control", placeholder="First Name", autocomplete="off") }}
+            </div>
+            <div class="form-group">
+                {{ form.lastname(class="form-control", placeholder="Last Name",autocomplete="off") }}
+            </div>
+
+            <div class="form-group">
+                {% if form.email.errors %}
+                    {{ form.email(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>
+                                {{ error }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.email(class="form-control", placeholder="Email Address",autocomplete="off") }}
+                {% endif %}
+
+            </div>
+            <div class="form-group">
+                {% if form.pw1.errors %}
+                    {{ form.pw1(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.pw1.errors %}
+                                <span>
+                                    {{ error}}
+                                </span>
+                            {% endfor %}
+                        </div>
+                {% else %}
+                    {{ form.pw1(class="form-control", placeholder="Password", onkeyup="validatePassword(this.value);", id="register_password") }}
+                {% endif %}
+                <!-- span id="msg" ></span -->
+            </div>
+            <div class="form-group">
+                {% if form.pw2.errors %}
+                    {{ form.pw2(class="form-control form-control-lg is-invalid")}}
+                        <div class="invalid-feedback">
+                            {% for error in form.pw2.errors %}
+                                <span>
+                                    {{ error}}
+                                </span>
+                            {% endfor %}
+                        </div>
+                {% else %}
+                    {{ form.pw2(class="form-control", placeholder="Confirm Password") }}
+                {% endif %}
+            </div>
+            
+            {{ form.submit(class="btn btn-primary", style="margin: 10px;") }}
+ 
+            <div id="message">
+                <p>A Strong password should contain minimum 3 out of 5 of the following:</p>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="numeric" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                <p id="special_char" class="invalid">Minimum <b>1 special characters</b></p>
+            </div>
+      
+        </form>
+  
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+            </small>
+        </div>
+    
+    </div>
+    </body>
+</main>
+{% endblock %}

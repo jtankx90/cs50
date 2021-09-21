@@ -1,0 +1,108 @@
+
+
+* {
+  max-width: 100%;
+
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+    
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+
+
+.content-section {
+
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  /* margin-bottom: 20px; */
+  margin: 0 auto;
+  max-width: 550px;
+
+}
+
+
+.btn-primary{
+  margin: 0px;
+}
+
+#message {
+    display:none;
+  }
+  
+#message p {
+    font-size: 12px;
+  }
+  
+.valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -5px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -5px;
+    content: "✖";
+  }
+  
+ #footer{
+  margin-top: 50px;
+  color: white;
+  height: 100px;
+  padding-top: 50px;
+ }
+
+ .card-img-top {
+  width: 100%;
+  object-fit: cover;
+}
+
+.navbar-dark .navbar-nav .active>.nav-link{
+  color:white;
+}
+
+.site-footer{
+  text-align: center; 
+  color: white;
+  text-decoration: none;
+
+}
+
+.active .nav-link::after {
+  color: red;
+}

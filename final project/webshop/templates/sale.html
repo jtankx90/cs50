@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+   Sale
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="index-section">
+    <div class='section-heading'>
+        <h2>
+        <a>Sale Items</a>
+        </h2>
+     
+    </div>
+    <br>
+    <div class="row">
+    {% for item in items %}
+    {% include 'includes/items_modals.html' %}
+
+    {% if item %}
+        <div class="col-sm-6 col-lg-3 py-2">
+            <div class="card h-100">
+                {% for x in img %}
+                {% if x.item_id == item.id %}
+                {% if '_1.jpg' in x.img_path %}
+                <img src="../../{{ x.img_path }}" class="card-img-top" alt="">
+                <div class="card-body h-20">
+                <h5 class="card-title">{{ item.name}}</h5>
+                <p class="card-text">{{ item.description}}</p>
+                </div>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#Modal-MoreInfo-{{ item.name }}">More Info</button>
+                </button>
+                {% endif %}
+                {% endif %}
+
+                {% endfor %}
+            </div>
+
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

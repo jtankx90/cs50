@@ -1,0 +1,43 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+
+
+<header>
+  <h2>Hi, welcome to admin page!</h2>
+</header>
+<br>
+
+
+
+<div class="row">
+<div class="container">
+    <form method="POST" action="/upload" enctype=multipart/form-data>
+        <label for="insertfile">Upload json File for inserting items</label>
+        <input type=file name="insertfile">
+
+        <input type=submit value=Upload>
+      </form>
+
+
+</div>
+
+
+
+<div class="container">
+
+  <form method="POST" action="/upload" enctype=multipart/form-data>
+
+    <label for="deletefile">Upload json File to delete items</label>
+    <input type=file name="deletefile">
+    <input type=submit value=Upload>
+  </form>
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

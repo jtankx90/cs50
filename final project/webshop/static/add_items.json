@@ -1,0 +1,17 @@
+{"items":[
+{"name":"item8","long_name":"this is item8","price":"8000","sale":"0","description":"This is item8","dimension":"To be updated"},
+{"name":"item9","long_name":"this is item9","price":"9000","sale":"0","description":"This is item9","dimension":"To be updated"},
+{"name":"item10","long_name":"this is item10","price":"10000","sale":"0","description":"This is item10","dimension":"To be updated"}
+],
+"item_img":[
+{"name":"item8","img_path":"static/img/item8_1.jpg"},
+{"name":"item8","img_path":"static/img/item8_2.jpg"},
+{"name":"item8","img_path":"static/img/item8_3.jpg"},
+{"name":"item9","img_path":"static/img/item9_1.jpg"},
+{"name":"item9","img_path":"static/img/item9_2.jpg"},
+{"name":"item9","img_path":"static/img/item9_3.jpg"},
+{"name":"item10","img_path":"static/img/item10_1.jpg"},
+{"name":"item10","img_path":"static/img/item10_2.jpg"},
+{"name":"item10","img_path":"static/img/item10_3.jpg"}
+]
+}

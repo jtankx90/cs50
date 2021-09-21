@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title%}
+  About
+{% endblock %}
+
+{% block content %}
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Insert/a>
+      <form action="/data" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>Select image</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image">
+            <label class="custom-file-label" for="image">Select image...</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Update</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Delete</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
+
+{% endblock %}
+
+

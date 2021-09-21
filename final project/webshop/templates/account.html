@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<main class="container p-5">
+    <div class="content-section">
+      <legend class="border-bottom mb-3">Account Info</legend>
+        <p class="account-heading">Name: {{ current_user.firstname}} {{current_user.lastname}}</h2>
+        <p class="account-heading">Email: {{ current_user.email }}</p>
+        <form method = "POST" class="form-register">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                Update {{ form.email.label() }} 
+                {% if form.email.errors %}:
+                    {{ form.email(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                            <span>
+                                {{ error }}
+                            </span>
+                         {% endfor %}
+                    </div>
+                {% else %}  
+                    
+                    {{ form.email(class="form-control", placeholder="Email Address",autocomplete="off") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock content %}

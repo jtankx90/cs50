@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block content %}
+<main class="container p-5">
+    <body class="text-center">
+    <div class="content-section">
+        <form method="POST" class="form-login">
+            {{ form.hidden_tag() }}
+            <h1>Reset Password</h1><br>
+
+        
+            <div class="form-group">
+                {% if form.pw1.errors %}
+                    {{ form.pw1(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.pw1.errors %}
+                            <span>
+                                {{ error }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.pw1(class="form-control", placeholder="Password") }}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {% if form.pw2.errors %}
+                    {{ form.pw2(class="form-control form-control-lg is-invalid")}}
+                    <div class="invalid-feedback">
+                        {% for error in form.pw2.errors %}
+                            <span>
+                                {{ error }}
+                            </span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.pw2(class="form-control", placeholder="Password") }}
+                {% endif %}
+            </div>
+           
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary", style="margin: 10px;") }}
+            </div>
+        
+   
+        </form>
+    </div>
+    </body>
+</main>
+{% endblock %}
+
