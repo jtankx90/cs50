@@ -30,7 +30,7 @@ In the login page, visitors can login to their registered account via the email 
 3. **Register**  
 Vistors can register an account to gain access to sale items. Vistors are required to key in their first and last name, email address, password and also a confirmation password. In the password field, a prompt of messages (requirements) is shown for the specification of a strong password. Each message will turn green indicating the meeting of that requirement. 
 
-Files used: Register.html
+    Files used: Register.html
 
 ## Registered Users  
 
@@ -39,7 +39,7 @@ Once visitors have logged onto their account, two addiitional nav items will be 
 1. **Sale**  
 Items that are on sale will be shown in this page in the format of cards in a deck. For each card, similar to the product page, users can click on the more info button that view further information for each of the sale product.  
 
-Files used: Sale.html, items_modal.html
+    Files used: Sale.html, items_modal.html
 
 2. **Account**
 There is  an account option that allows users to change their email address registered with the website.
@@ -51,7 +51,7 @@ Files used: account.html
 This app has an added administrator functionality, for which the designated admin account can access the backend database without the use of any database software. The Admin tab in the nav bar will only be available to the admin account. Any attempts for direct access to the pages will be redirectd to the home page. In the admin page, the admin can do the following:   
 * insert and delete entries in the items and item_img table through the upload of a json file for each function;
 * Alternatively, each table in the database is presented as a tab, in which the data for each table will be shown. In the user table, the password column has been remove for viewing i.e. even when using the admin account, the hashed password will not be shown. When inserting new users directly (without registering an account), a password input box will be available for inputing the password. The password will then be converted into into it's hashed equivalent and stored in the database
-    
+
 Files used: admin.py, admin/index.html  
 
 
