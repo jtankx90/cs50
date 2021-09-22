@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Cash
+{% endblock %}
+
+
+
+{% block main %}
+
+ <form action="/cash" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="cash_amount" placeholder="Amount to Add">
+         <span id = "msg_cash">Enter negative number to reduce cash balance</span>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Update Cash</button>
+        </div>
+ </form>
+
+
+
+
+
+
+
+
+
+{% endblock %}

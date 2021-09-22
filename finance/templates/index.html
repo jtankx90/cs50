@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+
+
+{% block main %}
+
+
+            <div class="container p-5">
+                <table class = "table table-striped">
+                    <thead>
+                        <tr>
+                            {% for header in current_headers %}
+                            <th>{{header}}</th>
+                            {% endfor%}
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for i in range(length) %}
+
+                        <tr>
+                            {% if current_port['Symbol'][i] != 'CASH' %}
+                            <td><a href= "{{ url_for('buy', type=current_port['Symbol'][i]) }}" class="buy_button">BUY</a><span>  |  </span><a href= "{{ url_for('sell', type=current_port['Symbol'][i]) }}" class="sell_button">SELL</a></td>
+                            {% else %}
+
+
+                            <td><a style ="color: #b33c00;font-weight: bold" href = "{{ url_for('cash') }}">UPDATE CASH</a></td>
+
+                            {% endif %}
+
+
+                            <td>{{current_port['Symbol'][i]}}</td>
+                            <td>{{current_port['Name'][i]}}</td>
+                            <td>{{current_port['Shares'][i]}}</td>
+                            <td>{{current_port['Price'][i]}}</td>
+                            <td>{{current_port['Total'][i] | usd }}</td>
+
+
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                <tfoot>
+
+
+                    <tr>
+                        <td colspan = "5"></td>
+                        <td style="font-weight:bold">{{current_port['Total']|sum |usd}}</td>
+                    </tr>
+                </tfoot>
+
+                </table>
+            </div>
+{% endblock %}

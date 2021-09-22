@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+ <form action="/sell" method="post">
+    <div class = "form-control" name = "symbol">
+        <select id = "symbol" name = "symbol">
+
+            {% if name2 and (name2 in symbol)  %}
+                <option value = "{{ name2 }}">{{ name2 }}</option>
+
+            {% else %}
+                <option disabled selected value>Symbol</option>
+            {% endif %}
+            {% for sym in symbol %}
+                {% if sym != name2 %}
+                    <option value ="{{ sym }}">{{ sym }}</option>
+                {% endif %}
+            {%endfor %}
+        </select>
+    </div>
+
+
+
+
+    <div class="form-group">
+
+        <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number" min = "0">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+
+
+
+
+
+{% endblock %}

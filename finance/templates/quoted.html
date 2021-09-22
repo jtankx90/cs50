@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Price Quoted
+{% endblock %}
+
+{% block main %}
+    <form action="/quote">
+        <p>A share of {{lookup_dict.name}} ({{lookup_dict.symbol}}) costs {{lookup_dict.price | usd}}</p>
+    </form>
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+
+
+            <div>
+                <form action = "/download" method = "post">
+                    <button class="btn btn-primary" type="submit">Download</button>
+                </form>
+            </div>
+            <div class="container p-6">
+
+                <table class = "table table-striped">
+                    <thead>
+                        <tr>
+                            {% for header in headers %}
+                            <th>{{header}}</th>
+                            {% endfor%}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(length) %}
+                        <tr>
+                            <td>{{rows[i].Symbol}}</td>
+                            <td>{{rows[i].Shares}}</td>
+                            <td>{{rows[i].Price}}</td>
+                            <td>{{rows[i].Transacted}}</td>
+
+                        </tr>
+                        {% endfor %}
+
+
+                    </tbody>
+
+
+                </table>
+            </div>
+{% endblock %}
