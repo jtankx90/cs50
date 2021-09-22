@@ -35,7 +35,7 @@ class HomeLink(MenuLink):
 
 class UserAdmin(AuthMixin,ModelView):
     def is_accessible(self):
-        return current_user.is_authenticated and current_user.email == 'admin@gmail.com'
+        return current_user.is_authenticated and current_user.email == insert_admin_email_here@gmail.com
     
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('login'))
@@ -53,7 +53,7 @@ class UserAdmin(AuthMixin,ModelView):
 
 class Adminview2(ModelView):
     def is_accessible(self):
-        return current_user.is_authenticated and current_user.email == 'admin@gmail.com'
+        return current_user.is_authenticated and current_user.email == insert_admin_email_here@gmail.com
         
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('login'))
@@ -65,7 +65,7 @@ class MyAdminIndexView(AuthMixin,AdminIndexView):
         if not current_user.is_authenticated:
             return redirect(url_for('login',next=request.url))
     def is_accessible(self):
-        return current_user.is_authenticated and current_user.email == 'admin@gmail.com'
+        return current_user.is_authenticated and current_user.email == insert_admin_email_here@gmail.com
     def inaccessible_callback(self, name, **kwargs):
         return redirect(url_for('login',next=request.url))
    

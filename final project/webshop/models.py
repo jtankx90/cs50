@@ -70,28 +70,3 @@ class User(db.Model,UserMixin):
         except:
             return None
         return User.query.get(user_id)
-
-class UserAdmin(ModelView):
-    def is_accessible(self):
-        return current_user.is_authenticated and current_user.email == 'admin@gmail.com'
-    
-    def inaccessible_callback(self, name, **kwargs):
-        return redirect(url_for('index'))
-    # Don't display the password on the list of Users
-    column_exclude_list = ('password_hash')
-    form_excluded_columns = ('password_hash')
-
-    def scaffold_form(self):
-        form_class = super(UserAdmin, self).scaffold_form()
-        form_class.password2 = PasswordField('New Password')
-        return form_class
-    def on_model_change(self, form, model, is_created):
-        if len(model.password2):
-                model.password_hash = bcrypt.generate_password_hash(model.password2).decode('utf-8')
-
-
-class MyAdminIndexView(AdminIndexView):
-    def is_accessible(self):
-        return current_user.is_authenticated and current_user.email == 'admin@gmail.com'
-   
-
