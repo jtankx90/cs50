@@ -67,7 +67,7 @@ contains all the forms used in the app
 3) **models.py**   
 data models used in the backend database, consisting of 3 models: User, Items, Item_img  
     In the User table, there are 4+1 (primary key) column  
-    In the Items table, there are 9 + 1 (primary key) column
+    In the Items table, there are 9 + 1 (primary key) column  
     In the Item_img table, there are 2 + 1 (foreign key to Item table) + 1 primary key
 
 4) **shop.db**   
